@@ -1,0 +1,107 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+PayJunctionLibrary
+</name>
+</assembly>
+<members>
+<member name="T:My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="M:PayJunction.PayJunctionClient.ExecuteRequest``1(PayJunction.Request{``0})">
+ <summary>
+ Executes request. Check request object after execution to see response.
+ </summary>
+ <param name="request">Request to process</param>
+</member>
+<member name="M:PayJunction.Request`1.IsValid">
+ <summary>
+ Can be used to check whether all required params and headers are entered by API Library user.
+ </summary>
+ <returns></returns>
+</member>
+<member name="P:PayJunction.SmartTerminal.SmartTerminalTransactionResponse.RequestPaymentId">
+ <summary>
+ Store permanently to compare response status with webhook response.
+ </summary>
+</member>
+<member name="M:PayJunction.SmartTerminal.WebhookResponse.Validate(System.String,System.String,System.Collections.Specialized.NameValueCollection)">
+ <summary>
+ 
+ </summary>
+ <param name="secret">Secret for webhook used when adding it.</param>
+ <returns></returns>
+</member>
+<member name="P:PayJunction.Transaction.NewTransactionRequest.RequestMode">
+ <summary>
+ Defaults to Charge
+ </summary>
+</member>
+<member name="P:PayJunction.Transaction.NewTransactionRequest.EndPoint">
+ <summary>
+ Endpoint. Don't include slash in beginning.
+ </summary>
+</member>
+<member name="P:PayJunction.Transaction.NewTransactionRequest.TerminalID">
+ <summary>
+ ID of terminal to run transaction on.
+ </summary>
+</member>
+<member name="P:PayJunction.Transaction.NewTransactionRequest.CardCVV">
+ <summary>
+ Empty to turn off cvv check. Else CVV number
+ </summary>
+</member>
+<member name="M:PayJunction.Transaction.NewTransactionRequest.ProcessResponse">
+ <summary>
+ It creates new response everytime. Caller you reuse it instead of calling it multiple time
+ </summary>
+ <returns></returns>
+</member>
+<member name="P:PayJunction.Webhook.AddWebhookRequest.Url">
+ <summary>
+ Must be HTTPS
+ </summary>
+</member>
+<member name="M:PayJunction.Webhook.AddWebhookRequest.#ctor(System.String,System.String)">
+ <summary>
+ 
+ </summary>
+ <param name="url__1">Must be HTTPS</param>
+ <param name="secret__2">No support.Empty if don't want webhook response validation else need to store and provide it while parsing response which is received on webhook. Max length 255</param>
+</member>
+<member name="M:PayJunction.Webhook.DeleteWebhookRequest.#ctor(System.String)">
+ <summary>
+ 
+ </summary>
+ <param name="url"></param>
+ <param name="secret">Empty if don't want webhook response validation else need to store and provide it while parsing response which is received on webhook. Max length 255</param>
+</member>
+<member name="P:PayJunction.Webhook.UpdateWebhookRequest.Url">
+ <summary>
+ Must be HTTPS
+ </summary>
+</member>
+<member name="M:PayJunction.Webhook.UpdateWebhookRequest.#ctor(System.String,System.String,System.String)">
+ <summary>
+ 
+ </summary>
+ <param name="url__1">Must be HTTPS</param>
+ <param name="secret__2">No support.Empty if don't want webhook response validation else need to store and provide it while parsing response which is received on webhook. Max length 255</param>
+</member>
+</members>
+</doc>
